@@ -1,0 +1,169 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+body {
+    /* Background */
+    background: #01b4ff;
+    background: radial-gradient(at left top, #01b4ff, #1680c6);
+}
+
+/* Fonts */
+/* weight 100-900 */
+#inter-light {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+#inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* Nav Styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    margin-bottom: 0;
+    color: white;
+}
+
+nav .logo {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+nav .style_swapper {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+/* Main Styling */
+main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .boxes {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main .boxes .box {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    /* Text Styling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 50px;
+
+    /* Transition */
+    transition: 0.1s ease-in-out;
+}
+
+main .boxes .box:hover {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+main .boxes .box.used {
+    cursor: no-drop;
+}
+
+main .boxes .box.used.winner {
+    transition: 0.2s ease-in-out;
+    color: white;
+    background-color: #7ae582;
+}
+
+main .boxes .box.used:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Restart Button */
+main .restart {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    color: white;
+    width: fit-content;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+main .restart:hover {
+    transition: 0.1s ease-in-out;
+    border: 1px solid rgba(255, 255, 255,0.75);
+}
+
+main .restart svg {
+    transform: rotate(180deg);
+}
+
+/* Mode */
+.history {
+    display: flex;
+    gap: 3px;
+}
+
+.history .mode {
+    cursor: pointer;
+}
+
+/* footer styling */
+footer {
+    color: rgba(229, 229, 229, 0.819);
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(229, 229, 229, 0.819);
+}
